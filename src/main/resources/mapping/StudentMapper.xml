@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace = "com.demo.mapper.StudentMapper">
+    <resultMap id="BaseResultMap1" type="com.demo.entity.Student">
+        <result column="Sno" jdbcType="BIGINT" property="sNo" />
+        <result column="Sname" jdbcType="VARCHAR" property="sName" />
+        <result column="Sage" jdbcType="BIGINT" property="sAge" />
+    </resultMap>
+    <insert id="insert" parameterType="com.demo.entity.Student" >
+        INSERT INTO students (Sno,Sname,Sage) VALUES (#{sNo},#{sName},#{sAge})
+    </insert>
+</mapper>
